@@ -8,7 +8,7 @@ The documented validation flow is manual plugin installation into DankMaterialSh
 
 ```bash
 mkdir -p ~/.config/DankMaterialShell/plugins
-cp -r /home/mark/code/slopbar-cpu-core-visualizer ~/.config/DankMaterialShell/plugins/CpuCoreVisualizer
+cp -r /home/mark/code/slopbar ~/.config/DankMaterialShell/plugins/CpuCoreVisualizer
 ```
 
 Then open **DMS Settings -> Plugins**, click **Scan for Plugins**, enable **CPU Core Visualizer**, and add `cpuCoreVisualizer` to the DankBar widget list.
