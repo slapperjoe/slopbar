@@ -174,3 +174,14 @@
 - Drag = right-button drag; resize = bottom-right purple handle.
 - Hot reload a changed plugin: `dms ipc call plugins reload <pluginId>` (PluginService logs "Plugin unloaded/loaded").
 - `dms ipc call desktopWidget list` shows instances. The QML `PluginService` (what discovers plugins) is separate from the Go daemon's `plugin-scan` — the latter can be empty even when plugins work.
+
+## Pinning a desktop widget to a screen corner (survives scale changes)
+- The wrapper positions the widget via `WlrLayershell.margins` — a plain saved x/y drifts away from the corner when the screen scale/DPR changes, because the widget keeps its absolute offset.
+- A COORDINATE-ONLY recompute (`widgetX = screenWidth - width - margin`) does NOT reliably track on scale change — the user reported the pin held at scale 1 but the widget didn't follow the corner when zoomed.
+- The robust fix is NATIVE layer-shell corner anchoring: set `WlrLayershell.anchors` to the corner (e.g. `right: true; bottom: true`) with right/bottom margins. The compositor (wlroots) keeps the surface pinned to that corner and repositions it automatically on any output scale/geometry change.
+- Implemented in `patches/desktop-widget-corner-pin.patch` (applied to the system wrapper by `patches/apply-corner-pin.sh`). Instance config keys:
+  - `pinToCorner: true` (or `positionAnchor: "bottomRight"` / `"topLeft"` / `"topRight"` / `"bottomLeft"`)
+  - `cornerMargin` (px, both axes) or per-axis `anchorMarginX` / `anchorMarginY`
+- The plugin's own `DigitalClockSettings.qml` exposes the toggle + margin slider; the instance-scoped `pluginService.savePluginData` writes them into the instance config.
+- Dragging is disabled while anchored (`!root.anchored` on the dragArea); resize still works.
+- `dms-shell` package updates overwrite the system wrapper — re-run `apply-corner-pin.sh` after upgrades.

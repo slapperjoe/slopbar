@@ -51,6 +51,7 @@ Split monitoring plugins for [DankBar](https://github.com/DankMachines/DankMater
 - Wide horizontal digital clock + date, ideal for the corner of your desktop
 - Toggles for seconds, AM/PM, and date
 - Fixed font sizing: resizing the widget trims padding, not the digits
+- Pin to bottom-right corner with adjustable margin (uses native layer-shell anchors, survives screen scale changes)
 
 ## Desktop widget support
 

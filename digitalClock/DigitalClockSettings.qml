@@ -32,4 +32,21 @@ PluginSettings {
         maximum: 100
         unit: "%"
     }
+
+    ToggleSetting {
+        settingKey: "pinToCorner"
+        label: "Pin to bottom-right corner"
+        description: "Keep the widget pinned to the corner with a fixed margin, even when screen scale changes"
+        defaultValue: false
+    }
+
+    SliderSetting {
+        settingKey: "cornerMargin"
+        label: "Corner Margin"
+        description: "Distance from the corner edge (px)"
+        defaultValue: 60
+        minimum: 0
+        maximum: 400
+        unit: "px"
+    }
 }
