@@ -1,7 +1,7 @@
 {
     "id": "cpuCoreVisualizer",
     "name": "CPU Core Visualizer",
-    "description": "Per-core CPU usage bars for DankBar",
+    "description": "Per-core CPU usage bars for SlopBar",
     "version": "0.2.0",
     "author": "Mark + Copilot",
     "type": "widget",

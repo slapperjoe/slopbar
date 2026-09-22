@@ -10,4 +10,4 @@ cp -r ../gpuMonitor/* "$PLUGIN_DIR/"
 
 echo "GPU Monitor plugin installed to $PLUGIN_DIR"
 echo "Open DMS Settings -> Plugins, click 'Scan for Plugins', enable 'GPU Monitor'."
-echo "Then add 'gpuMonitor' to your DankBar widget list or use as a desktop widget."
+echo "Then add 'gpuMonitor' to your SlopBar widget list or use as a desktop widget."

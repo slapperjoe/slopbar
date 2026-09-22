@@ -70,5 +70,5 @@ Applied. To pin the Digital Clock (or any desktop widget) to a corner:
   "Pin to bottom-right corner" (optional "Corner Margin").
 
 Also reinstall the plugin so the new settings appear:
-  cd dankbar-cpu-core-visualizer && ./install.sh --plugin digitalClock
+  cd slopbar-cpu-core-visualizer && ./install.sh --plugin digitalClock
 EOF

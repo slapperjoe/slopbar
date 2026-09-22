@@ -107,7 +107,7 @@ PluginComponent {
     }
 
     function disableLidSleep() {
-        Proc.runCommand("inhibit_lid", ["sh", "-c", "systemd-inhibit --what=handle-lid-switch --who='DankBar QuickActions' --why='User disabled lid sleep' sleep infinity & echo $!"],
+        Proc.runCommand("inhibit_lid", ["sh", "-c", "systemd-inhibit --what=handle-lid-switch --who='SlopBar QuickActions' --why='User disabled lid sleep' sleep infinity & echo $!"],
             function(output, exitCode) {
                 if (exitCode !== 0 || !output) {
                     ToastService.error("Failed", "Could not disable lid sleep. Is systemd-inhibit available?");
@@ -138,7 +138,7 @@ PluginComponent {
 
     function restoreLidInhibitor() {
         if (root.lidInhibitorPid > 0) return;
-        Proc.runCommand("inhibit_lid_restore", ["sh", "-c", "systemd-inhibit --what=handle-lid-switch --who='DankBar QuickActions' --why='User disabled lid sleep' sleep infinity & echo $!"],
+        Proc.runCommand("inhibit_lid_restore", ["sh", "-c", "systemd-inhibit --what=handle-lid-switch --who='SlopBar QuickActions' --why='User disabled lid sleep' sleep infinity & echo $!"],
             function(output, exitCode) {
                 if (exitCode === 0 && output) {
                     var pid = parseInt(output);

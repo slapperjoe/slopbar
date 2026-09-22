@@ -1,7 +1,7 @@
 {
   "id": "gpuMonitor",
   "name": "GPU Monitor",
-  "description": "NVIDIA and AMD GPU telemetry with process details for DankBar",
+  "description": "NVIDIA and AMD GPU telemetry with process details for SlopBar",
   "version": "0.1.0",
   "author": "Mark + Copilot",
   "type": "widget",

@@ -1,4 +1,4 @@
-# DankBar Monitoring Plugins
+# SlopBar Monitoring Plugins
 
 Split monitoring plugins for [DankBar](https://github.com/DankMachines/DankMaterialShell) and niri desktop widgets. Each plugin can run both as a compact DankBar widget and as a standalone desktop widget hosted by [DankMaterialShell](https://github.com/DankMachines/DankMaterialShell) on niri.
 

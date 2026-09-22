@@ -1,7 +1,7 @@
 {
     "id": "memoryMonitor",
     "name": "Memory Monitor",
-    "description": "Memory usage monitor for DankBar",
+    "description": "Memory usage monitor for SlopBar",
     "version": "0.2.0",
     "author": "Mark + Copilot",
     "type": "widget",

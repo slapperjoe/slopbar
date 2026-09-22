@@ -1,7 +1,7 @@
 {
     "id": "cpuCoreVisualizer",
     "name": "CPU Core Visualizer",
-    "description": "Per-core CPU bars plus NVIDIA GPU, memory, disk, and network throughput history for DankBar",
+    "description": "Per-core CPU bars plus NVIDIA GPU, memory, disk, and network throughput history for SlopBar",
     "version": "0.1.0",
     "author": "Mark + Copilot",
     "type": "widget",
